@@ -5,7 +5,7 @@ ENV LC_ALL=C.UTF-8 LANG=C.UTF-8 LANGUAGE=C:en
 
 RUN apt update -y && apt upgrade -y
 
-RUN apt install -y python3 python3-pip cmake patchelf tar gzip curl wget
+RUN apt install -y python3 python3-pip cmake patchelf tar gzip curl wget unzip git
 
 # use gcc 8 for full c++14 function
 RUN apt install -y gcc-8 g++-8 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8
